@@ -1,5 +1,6 @@
 import requests
 import time
+import fpdf
 
 import matplotlib.pyplot as plt
 from matplotlib.patches import Polygon
@@ -111,6 +112,30 @@ def display_image(image_url, plt, polygons):
     _ = plt.axis("off")
 
     return(plt)
+
+def convert_to_pdf(textList):
+    """
+    Converts the list of text detected,
+    into a pdf file.
+    
+    Arguments:
+        textList {list} -- text list detected
+    
+    Returns:
+        [bytes] -- resulting PDF file
+    """
+
+
+    
+    pdf = fpdf.FPDF(format='letter')
+    pdf.add_page()
+    pdf.set_font('Arial', size=12)
+
+    for line in textList:
+        pdf.write(5, str(line))
+        pdf.ln()
+
+    return (pdf.output(name = 'text_detected.pdf', dest='S'))
 
 
 
