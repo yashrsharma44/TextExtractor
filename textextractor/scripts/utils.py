@@ -1,8 +1,12 @@
 import requests
 import time
 import fpdf
+import StringIO
+import flask
+
 
 import matplotlib.pyplot as plt
+from pdf2image import convert_from_path
 from matplotlib.patches import Polygon
 from PIL import Image
 from io import BytesIO
@@ -93,7 +97,7 @@ def display_image(image_url, plt, polygons):
         polygons {list} -- Contains the x,y coordinates of the text extracted
 
     Returns:
-        plt {Object} : Plot object
+       [Object] : Plot object
     """
 
     plt.figure(figsize=(15, 15))
@@ -137,10 +141,25 @@ def convert_to_pdf(textList):
 
     return (pdf.output(name = 'text_detected.pdf', dest='S'))
 
+def convert_to_jpeg(pdfFile):
+    """
+    Takes in a pdf file, and returns a jpeg image
+    
+    Arguments:
+        pdfFile {Byte} -- pdf file 
+    
+    Returns:
+        [mimetype] -- jpeg image from the pdf file
+    """
 
+    
+    pages = convert_from_path(pdfFile, 500)
 
-
-
+    for key, page in enumerate(pages):
+        img_io = StringIO()
+        page.save(img_io,'JPEG')
+        img_io.seek(0)
+        return flask.send_file(img_io, mimetype='{}/jpeg'.format(pdfFile+key))
 
 
 
