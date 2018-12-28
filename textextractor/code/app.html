@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Drop Test</title>
+    <link rel="stylesheet" href="css/master.css">
+  </head>
+  <body>
+    <div id="uploads"></div>
+    <div class="drop" id="drop">
+      Drop you silly pic here
+    </div>
+
+    <script type="text/javascript">
+      var dropzone = document.getElementById('drop');
+
+      var upload = function(files) {
+        var formData = new FormData(),
+        xhr = new XMLHttpRequest(),
+        x;
+
+        for(x=0; x< files.length; x++){
+          formData.append('file[]', files[x]);
+        }
+
+        xhr.onload = function() {
+          var data = this.responseText;
+        }
+
+        xhr.open('FUNCTION_NAME', 'backend.py');
+
+        // link up backend here !!
+
+        xhr.send(formData);
+      }
+      dropzone.ondrop = function(e) {
+        e.preventDefault();
+        this.className = 'drop';
+        upload(e.dataTransfer.files);
+      }
+
+      dropzone.ondragover = function() {
+        this.className = 'drop dragover';
+        return false;
+      }
+
+      dropzone.ondragleave = function() {
+        this.className = 'drop';
+        return false;
+      }
+    </script>
+  </body>
+</html>
