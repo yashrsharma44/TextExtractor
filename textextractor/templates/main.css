@@ -1,0 +1,49 @@
+.drop {
+    width: 450px;
+    height: 300px;
+    border: 2px dashed #ccc;
+    color: #ccc;
+    line-height: 300px;
+    text-align: center;
+  }
+  
+  .drop.dragover{
+    text-align: center;
+    border-color: #000;
+    color: #000;
+  }
+
+  .navbar {
+    min-height: 150px;
+    padding-top: 10%;
+    background-image: linear-gradient(to right, #720e9e 0, #dd4b39 100%);
+    }
+
+    .navbar-brand {
+    text-align: right;
+    height: 150px;
+    line-height: 80px;
+    /* background-image: linear-gradient(to bottom right, red, yellow); */
+    }
+.btn-group .btn.btn-secondary.active {
+    background: orange;
+    }
+    
+    .btn-group .btn.btn-secondary {
+    background: grey;
+    }
+.jumbotron{
+    /* padding-bottom: 0%; */
+    margin-bottom: 0%
+}
+
+#display-pic{
+    max-width: 900px;
+    max-height: 700px;
+    padding:1px;
+   border:2px solid darkgrey;
+
+    display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
