@@ -1,4 +1,5 @@
 apturl==0.5.2
+astroid==2.1.0
 awscli==1.16.81
 beautifulsoup4==4.4.1
 bleach==2.1.2
@@ -26,6 +27,7 @@ ipykernel==4.8.0
 ipython==6.2.1
 ipython-genutils==0.2.0
 ipywidgets==7.1.0
+isort==4.3.4
 itsdangerous==0.24
 jedi==0.11.1
 Jinja2==2.8
@@ -36,10 +38,12 @@ jupyter-client==5.2.1
 jupyter-console==5.2.0
 jupyter-core==4.4.0
 language-selector==0.1
+lazy-object-proxy==1.3.1
 louis==2.6.4
 lxml==3.5.0
 Mako==1.0.3
 MarkupSafe==0.23
+mccabe==0.6.1
 mistune==0.8.3
 nbconvert==5.3.1
 nbformat==4.4.0
@@ -63,6 +67,7 @@ pycurl==7.43.0
 Pygments==2.2.0
 pygobject==3.20.0
 PyJWT==1.3.0
+pylint==2.2.2
 pyOpenSSL==0.15.1
 pyparsing==2.0.3
 python-apt==1.1.0b1
@@ -86,6 +91,7 @@ terminado==0.8.1
 testpath==0.3.1
 tornado==4.5.3
 traitlets==4.3.2
+typed-ast==1.1.1
 ubuntu-drivers-common==0.0.0
 ufw==0.35
 unattended-upgrades==0.1
@@ -111,6 +117,7 @@ wcwidth==0.1.7
 webencodings==0.5.1
 Werkzeug==0.12.2
 widgetsnbextension==3.1.0
+wrapt==1.10.11
 xdiagnose==3.8.4.1
 xkit==0.0.0
 XlsxWriter==0.7.3
