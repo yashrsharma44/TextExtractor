@@ -10,6 +10,7 @@ requests = "*"
 flask = "*"
 fpdf = "*"
 pdf2image = "*"
+matplotlib = "*"
 
 [requires]
 python_version = "3.5"
