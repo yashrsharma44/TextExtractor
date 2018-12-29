@@ -1,7 +1,7 @@
 {
     "_meta": {
         "hash": {
-            "sha256": "ea38fd965f11954186c67393cf73e70d30b2fb6bea144d8387375b1d204146aa"
+            "sha256": "2c4d073810dba431f7f1dc22a8d289a81d956999dbe81a37a31b0014334ef5ba"
         },
         "pipfile-spec": 6,
         "requires": {
@@ -58,6 +58,14 @@
             ],
             "index": "pypi",
             "version": "==1.7.2"
+        },
+        "gunicorn": {
+            "hashes": [
+                "sha256:aa8e0b40b4157b36a5df5e599f45c9c76d6af43845ba3b3b0efe2c70473c2471",
+                "sha256:fa2662097c66f920f53f70621c6c58ca4a3c4d3434205e608e121b5b3b71f4f3"
+            ],
+            "index": "pypi",
+            "version": "==19.9.0"
         },
         "idna": {
             "hashes": [
@@ -200,10 +208,10 @@
         },
         "pdf2image": {
             "hashes": [
-                "sha256:d6851105f4e4f116cbe8accb545036d67926cb7f9fdac94bddc3cf4efc0dda3e"
+                "sha256:7e0a2a9ff3a448ab724d78f967744e8588cf56e2cc370397c151a02202fdf345"
             ],
             "index": "pypi",
-            "version": "==1.3.0"
+            "version": "==1.3.1"
         },
         "pillow": {
             "hashes": [

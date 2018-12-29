@@ -11,6 +11,7 @@ flask = "*"
 fpdf = "*"
 pdf2image = "*"
 matplotlib = "*"
+gunicorn = "*"
 
 [requires]
 python_version = "3.5"
