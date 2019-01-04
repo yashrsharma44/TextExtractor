@@ -1,16 +1,20 @@
-from flask import Flask, render_template, request, send_from_directory, g, session,make_response
 import os
 import uuid
 import json
-from scripts.utils import make_request, render_analysis,get_text
+import sys
+import base64
+import requests
+import matplotlib.pyplot as plt
+
 from PIL import Image
 from io import BytesIO
-import base64
-import matplotlib.pyplot as plt
+from flask import Flask, render_template, request, send_from_directory, g, session,make_response
 from matplotlib.patches import Polygon
-import requests
 from fpdf import FPDF
 
+from .scripts.utils import make_request, render_analysis, get_text
+
+# sys.path.append('/textextractor')
 
 app = Flask(__name__)
 app.secret_key = b'_5#y2L"F4Q8z\n\xec]/'
