@@ -1,0 +1,1 @@
+web: gunicorn textextractor.app:app
