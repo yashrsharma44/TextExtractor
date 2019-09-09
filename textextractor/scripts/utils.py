@@ -22,7 +22,7 @@ def _get_subscription():
     """
 
     # subscription_key = str(input("Enter the Subscription key :"))
-    subscription_key = "fc132e755e0a41aeaa2ed3825ceccf56"
+    subscription_key = "adbe988ecde848e1b90b9a48c7b05a21"
     return subscription_key
 
 def _API_url():
