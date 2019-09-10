@@ -65,7 +65,28 @@
                                     <input type="radio" name="options" id="option2" autocomplete="off" value="Printed"> Printed
                                 </label>    
                         </div>
+                        <div id="webchat" role="main"></div>
+                        <script src="https://cdn.botframework.com/botframework-webchat/latest/webchat.js"></script>
+                        <script>
+                           window.WebChat.renderWebChat(
+                              {
+                                 directLine: window.WebChat.createDirectLine({
+                                    token: '144gzebVYug.NqWuj1iHLz4JZYniBh_DHaw5AVnkaAK6DHsKl0zIcmg'
+                                 }),
+                                 userID: 'YOUR_USER_ID',
+                                 username: 'Web Chat User',
+                                 locale: 'en-US',
+                                 botAvatarInitials: 'WC',
+                                 userAvatarInitials: 'WW'
+                              },
+                              document.getElementById('webchat')
+                           );
+                        </script>
 
+                <div class="Map">
+                  <iframe width="600" height="450" frameborder="0" style="border:0" src="https://www.google.com/maps/embed/v1/search?q=Pharmacy&key=AIzaSyBrmooDjwf94R_4lVbvhK8kBv57OPkE8CI" allowfullscreen></iframe>
+                </div>
+                
                 <div class="row">
                     <div class="col-6">
                             <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
